@@ -5,8 +5,8 @@
 
 ## Repository includes basic demo below:
 
-[MyNote_MVC](https://linktodocumentation)
+[MyNote_MVC](https://github.com/NguyenDat0809/asp.net_basic_projects/tree/main/MyNote_DEMO_ASP.NET_MVC)
 
-[AdvancedApi_JWT](https://linktodocumentation)
+[AdvancedApi_JWT](https://github.com/NguyenDat0809/asp.net_basic_projects/tree/main/AdvancedApi)
 
-[MinimalApi_JWT_Filter](https://linktodocumentation)
+[MinimalApi_JWT_Filter]https://github.com/NguyenDat0809/asp.net_basic_projects/tree/main/Api_JWT_Filter)
