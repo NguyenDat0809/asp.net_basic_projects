@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MyNote.Models.Expense>
+
+<div class="container p-3">
+	<div class="row pt-4 ">
+		<div class="col-6">
+			<h2 class="text-primary">Expenses Item</h2>
+		</div>
+
+		<div class="col-6 align-text-right">
+			<a class="btn btn-primary" asp-controller="Expense" asp-action="Create">Create new Item</a>
+		</div>
+	</div>
+	<br />
+	@if (Model.Count() > 0)
+	{
+		<table class="table table-bordered table-striped" style="width: 100%">
+			<thdead>
+				<tr>
+					<th>Expenses Name</th>
+					<th>Amount </th>
+					<th>Modify </th>
+				</tr>
+			</thdead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td width="35%">@item.ExpensesName</td>
+						<td width="35%">@item.Amount</td>
+						<td width="30%">
+							<div class="w-100 btn-group" role="group">
+
+								<a class="btn btn-primary mx-1" asp-controller="Expense" asp-action="Update" asp-route-Id="@item.Id">Update</a>
+								<a class="btn btn-danger mx-1" asp-controller="Expense" asp-action="Delete" asp-route-Id="@item.Id">Delete</a>
+							</div>
+
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+	}
