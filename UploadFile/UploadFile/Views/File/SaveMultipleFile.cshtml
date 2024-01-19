@@ -1,0 +1,27 @@
+﻿@model UploadFile.Models.ModelsVM.ProfileVM
+
+@{
+    ViewData["Title"] = "SaveMultipleFileToDatabase";
+}
+
+<h1>SaveMultipleFileToDatabase</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SaveMultipleFile" enctype="multipart/form-data" method="post" asp-controller="File">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" multiple/>
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

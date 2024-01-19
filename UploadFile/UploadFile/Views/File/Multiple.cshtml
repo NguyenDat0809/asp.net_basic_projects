@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Upload Files";
+}
+<div class="text-center col-6">
+    <h1>Upload File</h1>
+    <form method="post" class="" enctype="multipart/form-data" asp-controller="File" asp-action="Multiple">
+        <div class="mb-3 ">
+            <input type="file" name="files" class="form-control" multiple></input>
+        </div>
+        <div class="mb-3 ">
+            <input type="submit" value="Upload files"></input>
+        </div>
+        <div class="text-success">
+            @Html.Raw(ViewBag.filesName)
+        </div>
+       
+    </form>
+</div>

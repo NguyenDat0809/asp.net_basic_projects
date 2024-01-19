@@ -20,6 +20,7 @@ namespace MyNoteTest
         ExpenseController _controller;
         Mock<IExpenseRepository> mock;
         public ExpenseControllerTest()
+            
         {   //dependency
             mock = new Mock<IExpenseRepository>();
             _controller = new ExpenseController(mock.Object);

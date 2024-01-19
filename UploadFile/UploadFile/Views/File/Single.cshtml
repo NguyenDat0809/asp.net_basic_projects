@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center col-6">
+    <h1>Upload File</h1>
+    <form method="post" class="" enctype="multipart/form-data" asp-controller="File" asp-action="Single">
+        <div class="mb-3 ">
+            <input type="file" name="file" class="form-control"></input>
+        </div>
+        <div class="mb-3 ">
+            <input type="submit" value="Upload file"></input>
+        </div>
+        <div class="text-success">
+            FileName: @ViewBag.fileName 
+        </div>
+        <div class="text-success">
+            Full Path: @ViewBag.fullPath
+        </div>
+        <div class="text-success">
+            File Save Path:  @ViewBag.fileSavePath 
+        </div>
+    </form>
+</div>
